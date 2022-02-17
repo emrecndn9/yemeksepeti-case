@@ -1,0 +1,13 @@
+{
+    "baseUrl": "https://www.yemeksepeti.com/",
+    "downloadsFolder":"",
+    "responseTimeout":5000,
+    "requestTimeout":10000,
+    "defaultCommandTimeout":10000,
+    "env": {
+      "signIn": {
+        "email":"testyemeksepeti6@gmail.com",
+        "password":"Ee1234012400+"
+      }
+    }
+}
