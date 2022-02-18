@@ -23,24 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-Cypress.Commands.add(
-  "signIn",
-  (
-    email = Cypress.env("signIn").email,
-    password = Cypress.env("signIn").password
-  ) => {
-    const cssInputEmail = "#UserName";
-    const cssInputPassword = "#password";
-    const cssButtonLogin = "#ys-fastlogin-button";
-    cy.get(cssInputEmail).as("emailInput");
-    cy.get(cssInputPassword).as("passwordInput");
-    cy.get(cssButtonLogin).as("submitButton");
-    cy.get("@emailInput").type(email);
-    cy.get("@passwordInput").type(password);
-    cy.get("@submitButton").click();
-  }
-);
+import LoginPage from '../integration/PageObject/LoginPage';
+const login = new LoginPage();
+Cypress.Commands.add("login", () => {
+  login.enterEmail();
+  login.enterPassword();
+  login.submit();
+});
 
 Cypress.on("uncaught:exception", () => {
   // when the exception originated from an unhandled promise

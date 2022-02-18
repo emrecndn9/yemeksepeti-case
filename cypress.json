@@ -4,6 +4,7 @@
     "responseTimeout":5000,
     "requestTimeout":10000,
     "defaultCommandTimeout":10000,
+    "screenshotOnRunFailure":true,
     "env": {
       "signIn": {
         "email":"testyemeksepeti6@gmail.com",
