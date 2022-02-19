@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:gui": "cypress open",
+    "cypress:headless": "cypress run",
+    "cypress:chrome": "cypress run --browser chrome",
+    "cypress:firefox": "cypress run --browser firefox"
   },
   "repository": {
     "type": "git",
