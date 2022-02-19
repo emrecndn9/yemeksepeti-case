@@ -11,7 +11,7 @@ context("Add favourites Tests", () => {
   });
   beforeEach(() => {
     // home.goHome();
-    cy.login();
+    cy.login(); 
   });
   it("Search restaurants and add  a restaurants to favourites ", () => {
     home.searchRestaurants();
