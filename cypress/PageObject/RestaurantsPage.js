@@ -14,12 +14,23 @@ class RestaurantsPage {
     const cssMyFavourites = ".ys-icons-star";
     return cy.get(cssMyFavourites).click();
   }
+  closeModal(){
+    const cssAlternaviteModal=".confirmation-dialog";
+    const cssAlternaviteModalClose=".close-alternative-popup>img";
 
+    cy.get("body").then(($body) => {
+      cy.wait(500);
+      if ($body.find(cssAlternaviteModal).length) {
+        cy.get(cssAlternaviteModalClose).click();
+        
+      } 
+    });
+  }
   addFavRestaurant() {
     const cssRestaurantName = ".restaurantName";
     const cssAddFavButton = ".ys-icons-grayStar";
     const cssFavouriteRestaurant = ".mainpage-tabs-fav-restaurant";
-
+    
     return cy
       .get(cssRestaurantName)
       .first()
@@ -27,6 +38,7 @@ class RestaurantsPage {
       .then((text) => {
         text = text.replace(/^\s+|\s+$|\n/g, "");
         this.goToRestaurant();
+        this.closeModal();
         cy.get(cssAddFavButton).click();
         this.goFavrouritesTab();
         cy.get(cssFavouriteRestaurant).invoke("text").should("contain", text);
@@ -36,6 +48,7 @@ class RestaurantsPage {
   unFavRestaurant() {
     const restaurantsNotFoundOntab = "Favori restoranınız bulunamadı.";
     const cssRemoveFavButton = ".ys-icons-yellowStar";
+    this.closeModal();
     cy.get(cssRemoveFavButton).click();
     this.goFavrouritesTab();
     this.assertionNoFavs(restaurantsNotFoundOntab);

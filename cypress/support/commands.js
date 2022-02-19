@@ -23,7 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import LoginPage from '../integration/PageObject/LoginPage';
+import LoginPage from '../PageObject/LoginPage';
 const login = new LoginPage();
 Cypress.Commands.add("login", () => {
   login.enterEmail();

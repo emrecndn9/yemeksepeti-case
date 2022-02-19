@@ -1,14 +1,16 @@
 {
-    "baseUrl": "https://www.yemeksepeti.com/",
-    "downloadsFolder":"",
-    "responseTimeout":5000,
-    "requestTimeout":10000,
-    "defaultCommandTimeout":10000,
-    "screenshotOnRunFailure":true,
-    "env": {
-      "signIn": {
-        "email":"testyemeksepeti6@gmail.com",
-        "password":"Ee1234012400+"
-      }
+  "baseUrl": "https://www.yemeksepeti.com/",
+  "downloadsFolder": "",
+  "responseTimeout": 5000,
+  "requestTimeout": 10000,
+  "defaultCommandTimeout": 10000,
+  "screenshotOnRunFailure": true,
+  "env": {
+    "signIn": {
+      "email": "testyemeksepeti6@gmail.com",
+      "password": "Ee1234012400+"
     }
+  },
+  "video": false,
+  "projectId": "cutb64"
 }

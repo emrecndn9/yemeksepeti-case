@@ -1,4 +1,4 @@
-import LoginPage from "./PageObject/LoginPage";
+import LoginPage from "../PageObject/LoginPage";
 context("Login Tests", () => {
   const login = new LoginPage();
   before(() => {

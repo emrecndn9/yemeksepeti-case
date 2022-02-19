@@ -1,5 +1,5 @@
-import HomePage from "./PageObject/HomePage";
-import RestaurantsPage from "./PageObject/RestaurantsPage";
+import HomePage from "../PageObject/HomePage";
+import RestaurantsPage from "../PageObject/RestaurantsPage";
 context("Add favourites Tests", () => {
   const home = new HomePage();
   const restaurant = new RestaurantsPage();
