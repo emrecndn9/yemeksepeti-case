@@ -20,13 +20,13 @@ context("Login Tests", () => {
     );
   });
  
-  it("User try to login without email ", () => {
+  it("User try to login without email this test will fail", () => {
     login.clear()
     login.enterPassword();
     login.submit();
     cy.get(".help-block").invoke('text').should(
       "eq",
-      "Lütfen kullanıcı adınızı/e-postanızı giriniz."
+      "Lütfen kullanıcı adınızı/e-postanızı giriniz.."
     );
   });
   it("User try to login without password ", () => {
