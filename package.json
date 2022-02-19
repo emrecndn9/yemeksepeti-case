@@ -7,8 +7,7 @@
     "cypress:gui": "cypress open",
     "cypress:headless": "cypress run",
     "cypress:chrome": "cypress run --browser chrome",
-    "cypress:firefox": "cypress run --browser firefox",
-    "cypress run": "cypress run"
+    "cypress:firefox": "cypress run --browser firefox"
   },
   "repository": {
     "type": "git",
